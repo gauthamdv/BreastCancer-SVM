@@ -52,9 +52,9 @@ Baseline and tuned SVM models test accuracies:
 
 | Model                  | Baseline Accuracy | Tuned Accuracy |
 | ---------------------- | ----------------- | -------------- |
-| Linear SVM             | 96.5%             | 97.2%          |
-| RBF SVM                | 97.3%             | 98.2%          |
-| Polynomial SVM (deg=3) | 95.8%             | 97.8%          |
+| Linear SVM             | 96.50%            | 98.24%         |
+| RBF SVM                | 97.36%            | 98.24%         |
+| Polynomial SVM (deg=3) | 88.60%            | 93.85%         |
 
 * Confusion matrices and ROC curves available in `plots/`
 * PCA 2D projections show decision boundaries for each model
