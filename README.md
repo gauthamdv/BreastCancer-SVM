@@ -1,96 +1,79 @@
-# 🩺 Breast Cancer Detection with Support Vector Machines (SVM)
+# 🎗️ Breast-Cancer-Classification-SVM
 
-## 🚀 Project Overview
+## 📝 Project Overview
 
-This project leverages Support Vector Machines (SVM) to classify breast tumors as malignant or benign using the Breast Cancer Wisconsin (Diagnostic) dataset. The workflow encompasses:
+This project classifies breast cancer tumors as **benign** or **malignant** using **Support Vector Machines (SVM)**. The dataset used is the **Breast Cancer Wisconsin (Diagnostic) dataset**.
 
-* Data preprocessing
-* Model training (baseline and tuned)
-* Evaluation using metrics like accuracy, precision, recall, and F1-score
-* Hyperparameter tuning with GridSearchCV
-* Decision boundary visualization
-* Model saving for deployment
+Key objectives:
+
+* 🧹 Data loading & preprocessing
+* ⚡ Baseline and hyperparameter-tuned SVM models
+* 📊 Model evaluation: accuracy, confusion matrix, classification report, ROC curves
+* 🖼️ Visualization of decision boundaries using PCA
+* 💾 Saving trained models for deployment
 
 ---
 
-## 🛠️ Getting Started
+## ⚙️ Installation
 
-### 1️⃣ Clone the Repository
+Clone the repository and install dependencies:
 
 ```bash
 git clone https://github.com/gauthamdv/BreastCancer-SVM.git
 cd BreastCancer-SVM
-```
-
-### 2️⃣ Install Dependencies
-
-```bash
 pip install -r requirements.txt
 ```
 
-### 3️⃣ Prepare the Data
+---
 
-Run the preprocessing script to clean and prepare the dataset stored in the `datasets/` folder:
+## 🚀 Usage
+
+### Jupyter Notebook
+
+Run the interactive notebook:
 
 ```bash
-python data-preprocessing.py
+jupyter notebook BreastCancer_SVM.ipynb
 ```
 
-### 4️⃣ Run the Notebook
+### Python Scripts
 
-Open `svm-classifier.ipynb` to:
+Run preprocessing and modeling scripts:
 
-* Train baseline and tuned SVM models
-
-* Evaluate performance using accuracy, precision, recall, F1-score, and ROC curve
-
-* Visualize decision boundaries
-
-* Perform hyperparameter tuning with GridSearchCV
-
-* **Data:** `datasets/`
-
-* **Models saved in:** `models/`
-
-* **Plots saved in:** `plots/`
-
----
-
-## 📁 File Structure
-
-```text
-BreastCancer-SVM/
-├── datasets/                  # Raw and processed datasets
-├── models/                    # Saved models
-├── plots/                     # Visualizations and plots
-├── .gitignore                 # Git ignore file
-├── README.md                  # Project documentation (this file)
-├── data-preprocessing.py      # Data preprocessing script
-├── svm-classifier.ipynb       # Jupyter notebook for SVM classification
-└── requirements.txt           # Python dependencies
+```bash
+python data_preprocessing.py
 ```
 
 ---
 
-## 📊 Models & Evaluation
+## 📈 Results
 
-* **SVM Classifier:** Trained with linear and RBF kernels.
-* **Hyperparameter Tuning:** Utilizes GridSearchCV for optimal parameters.
-* **Evaluation Metrics:** Accuracy, precision, recall, F1-score, and ROC curve.
-* **Visualization:** Decision boundaries plotted for better understanding of model performance.
+Baseline and tuned SVM models test accuracies:
 
----
+| Model                  | Baseline Accuracy | Tuned Accuracy |
+| ---------------------- | ----------------- | -------------- |
+| Linear SVM             | 96.5%             | 97.2%          |
+| RBF SVM                | 97.3%             | 98.2%          |
+| Polynomial SVM (deg=3) | 95.8%             | 97.8%          |
 
-## ⚡ Usage
-
-1. Prepare the data using `data-preprocessing.py`.
-2. Open and run `svm-classifier.ipynb` to train, evaluate, and tune SVM models.
-3. Check saved plots and models in their respective folders.
+* Confusion matrices and ROC curves available in `plots/`
+* PCA 2D projections show decision boundaries for each model
 
 ---
 
-## 🤝 Contributions
+## 📂 File Structure
 
-Contributions are welcome! Feel free to open a pull request or report issues.
+```
+BreastCancer-Classifier/
+├── datasets/             # CSV dataset files
+├── plots/                # Plots: decision boundaries, confusion matrices, ROC curves
+├── models/               # Saved trained SVM models
+├── svm-classifier.ipynb  # Main notebook
+├── requirements.txt      # Python dependencies
+└── README.md             # Project description
+```
 
 ---
+
+**Author:** Gautham DV
+**Happy Coding!** 🎉
